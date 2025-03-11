@@ -1,0 +1,144 @@
+/* ********************* Footer ************************ */
+.footer {
+    background-color: #004ba8; /* Color de fondo AZUL=1a50e5 ; Azul Por defecto=004ba8 */
+    color: #ffffff; /* Color de texto */
+    padding: 20px 10px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Responsividad */
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    /* Asegura que las columnas sean flexibles */
+    /* flex: 1 1 200px;  */
+    max-width: 300px; 
+    padding: 0 50px
+  }
+  
+  .footer-logo {
+    max-width: 200px;
+    /* margin-bottom: 10px; */
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-menu li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-menu a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-menu a:hover {
+    text-decoration: underline;
+  }
+  
+/* Estilos básicos para los íconos */
+  /* .social-icons a {
+    font-size: 30px;
+    color: #fff; 
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    text-decoration: none; 
+  } */
+
+  /* Iconos (Facebook, instagram, tiktok...)*/
+/* Contenedor de los íconos */
+/* Efecto hover */
+  /* .social-icons a:hover {
+    transform: scale(1.5);
+    color: #cccccc; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  } */
+  
+ 
+.social-icons {
+  /* margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; */
+  font-size: 30px;
+  color: #fff; 
+  margin-top: 20px;
+  display: flex;
+  transition: transform 0.3s ease, color 0.3s ease; 
+  text-decoration: none;
+  gap: 15px; 
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.facebook:hover {
+  color: #cccccc;
+}
+
+.social-icon.tiktok:hover {
+  color: #000000;
+}
+
+.social-icon.instagram:hover {
+  color: #E1306C;
+}
+
+.social-icon.youtube:hover {
+  color: #FF0000;
+}
+/* *************** Copyright ************ */
+.footer-copyright {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #cccccc;
+}
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Apila las columnas */
+      align-items: center;
+    }
+  
+    .footer-column {
+      max-width: 100%; /* Toma todo el ancho disponible */
+      text-align: center;
+    }
+  
+    .social-icons a {
+      margin-right: 5px;
+    }
+    
+  .ft2 {
+    margin-top: 0px;
+    text-align: center;
+  }
+  }  
+
+/* ********************* End Footer ************************ */

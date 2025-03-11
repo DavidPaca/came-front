@@ -1,0 +1,45 @@
+<div class="carousel">
+  <div class="slides-container"
+    [ngStyle]="{'transform': 'translateX(' + (-100 * currentSlide) + '%)'}">
+    <div *ngFor="let slide of slides" class="slide"
+      [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
+      <div class="text-content">
+        <h1>{{ slide.title }}</h1>
+        <h1 *ngIf="slide.title2">{{ slide.title2 }}</h1>
+        <!-- <h1 *ngIf="slide.title3">{{ slide.title3 }}</h1> -->
+        <p class="text-parrafo">{{ slide.description }}</p>
+        <!-- Íconos de redes sociales -->
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"
+            class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank"
+            class="social-icon tiktok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank"
+            class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank"
+            class="social-icon youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flechas de navegación -->
+  <button class="arrow left" (click)="prevSlide()">&#8249;</button>
+  <button class="arrow right" (click)="nextSlide()">&#8250;</button>
+
+  <!-- Indicadores -->
+  <div class="indicators">
+    <span *ngFor="let slide of slides; let i = index"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)"></span>
+  </div>
+
+</div>

@@ -1,0 +1,190 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  
+  /* position: absolute; */
+  height: auto;
+  /* max-height: 90vh; */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+ /* Contenido del Texto  Verde = 48c856 ; Azul = 1a50e5 ; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); */
+.text-content {
+  text-align: center;
+  color: #46c856;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  animation: fadeIn 1.5s ease-in-out;
+  overflow: hidden;  
+}
+
+.text-parrafo {   
+  color: #fff;
+  text-align: center;   
+  animation: fadeIn 1s ease-in-out;
+  /* text-shadow: 5px 5px 5px rgba(26, 80, 229, 0.9); */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);  
+}
+
+
+.text-content h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Flechas de navegación */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicators span.active {
+  background-color: #fff;
+}
+/* Iconos (Facebook, instagram, tiktok...)*/
+/* Contenedor de los íconos */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.facebook:hover {
+  color: #4267B2;
+}
+
+.social-icon.tiktok:hover {
+  color: #000000;
+}
+
+.social-icon.instagram:hover {
+  color: #E1306C;
+}
+
+.social-icon.youtube:hover {
+  color: #FF0000;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .social-icon {
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+  .text-content p {
+    font-size: 1rem;
+  } 
+  .text-parrafo {
+    padding: 0 2rem; /* Espacio interno horizontal */
+  }
+  .text-content {
+    padding: 0 2rem;
+  }
+
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {    
+  /*VERDE: 48c856*/
+  .text-parrafo {   
+    padding: 0 2rem; /* Espacio interno horizontal */
+    /* font-weight: bold; */
+  }
+  .text-content {
+    padding: 0 2rem;
+  }
+}

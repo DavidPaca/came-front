@@ -1,0 +1,120 @@
+.team-section {
+    background-color: #f1f9f9; /* Fondo claro */
+    padding: 3rem 2rem;
+    text-align: center;
+  
+    .section-title {
+        color: #333;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 40px;
+        border-bottom: 2px solid #1a50e5;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+    }
+  
+    .section-description {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      color: #333;
+    }
+  
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    .team-card {
+      background-color: #fff; /* Fondo blanco para cada tarjeta */
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      max-width: 300px;
+      padding: 1.5rem;
+      text-align: center;
+  
+      .team-image img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      }
+  
+      .team-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #222;
+      }
+  
+      .team-divider {
+        border: 0;
+        height: 2px;
+        width: 50%;
+        background: #1a50e5; /* Color azul del divisor */
+        margin: 1rem auto;
+      }
+  
+      .team-role {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+        
+      }
+  
+      .team-bio {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.5;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+      }
+    }
+  }  
+
+  /***********************************************************************/
+  .slogan-section {
+    background-image: url('/assets/images/slogan/slogan2.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5cm; /* Ancho vertical definido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .slogan-container {
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);  
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .slogan-text {
+    color: #d97b00; /* Texto blanco para contraste  VERDE=46c856 ; AZUL=1a50e5 ; NARANJA=d97b00*/
+    font-size: 1.5rem; /* Tamaño de fuente para pantallas medianas */
+    font-weight: bolder;
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .slogan-text {
+      font-size: 1.2rem; /* Tamaño de fuente más pequeño para pantallas móviles */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .slogan-text {
+      font-size: 2rem; /* Tamaño de fuente más grande para pantallas grandes */
+    }
+  }
+  

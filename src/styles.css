@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 50px; /* Distancia desde la parte inferior */
+    right: 20px;  /* Distancia desde la parte izquierda */
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover en el botón */
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Ícono de WhatsApp */
+  .whatsapp-float i {
+    font-size: 28px;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .whatsapp-float i {
+      font-size: 24px;
+    }
+    /* .whatsapp-float {
+        position: fixed;
+        bottom: 220px; 
+        right: 20px;
+      } */
+  }
