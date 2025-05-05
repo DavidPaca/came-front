@@ -1,3 +1,46 @@
 <section>
     <app-navbar></app-navbar>
 </section>
+<br>
+<br>
+<br>
+<br>
+<section class="gallery-container">
+    <h1 class="gallery-title">GALERIA</h1>
+
+    <!-- Grid de imágenes -->
+    <div class="image-grid">
+        <div *ngFor="let image of images; let i = index" class="image-item">
+            <img [src]="image.url" [alt]="image.alt" (click)="openImage(i)"
+                class="gallery-image">
+        </div>
+    </div>
+</section>
+<section>
+    <!-- Modal para vista de pantalla completa -->
+    <div class="modal" [class.show-modal]="showModal"
+        (window:keydown)="onKeyDown($event)">
+        <div class="modal-content">
+            <span class="close-button" (click)="closeModal()">&times;</span>
+
+            <div class="image-container" *ngIf="selectedImage">
+                <img [src]="selectedImage.url" [alt]="selectedImage.alt"
+                    class="fullscreen-image">
+            </div>
+
+            <!-- Botones de navegación -->
+            <button class="nav-button prev-button"
+                (click)="prevImage()">&#10094;</button>
+            <button class="nav-button next-button"
+                (click)="nextImage()">&#10095;</button>
+
+            <!-- Contador de imágenes -->
+            <div class="image-counter">
+                {{ currentIndex + 1 }} / {{ images.length }}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <app-footer></app-footer>
+</section>
