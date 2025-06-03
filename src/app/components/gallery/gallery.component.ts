@@ -39,15 +39,18 @@ export class GalleryComponent implements OnInit {
     
     // Crear el array con los nombres exactos y formatos correctos
     this.images = [
-      { id: 1, url: `${basePath}/img1.png`, alt: 'Imagen 1' },
+      { id: 1, url: `${basePath}/img1.jpg`, alt: 'Imagen 1' },
       { id: 2, url: `${basePath}/img2.jpg`, alt: 'Imagen 2' },
       { id: 3, url: `${basePath}/img3.jpg`, alt: 'Imagen 3' },
       { id: 4, url: `${basePath}/img4.jpg`, alt: 'Imagen 4' },
       { id: 5, url: `${basePath}/img5.jpg`, alt: 'Imagen 5' },
       { id: 6, url: `${basePath}/img6.jpg`, alt: 'Imagen 6' },
-      { id: 7, url: `${basePath}/img7.png`, alt: 'Imagen 7' },
-      { id: 8, url: `${basePath}/img8.png`, alt: 'Imagen 8' },
-      { id: 9, url: `${basePath}/img9.jpeg`, alt: 'Imagen 9' }
+      { id: 7, url: `${basePath}/img7.jpg`, alt: 'Imagen 7' },
+      { id: 8, url: `${basePath}/img8.jpg`, alt: 'Imagen 8' },
+      { id: 9, url: `${basePath}/img9.jpg`, alt: 'Imagen 9' },
+      { id: 9, url: `${basePath}/img10.jpg`, alt: 'Imagen 10' },
+      { id: 9, url: `${basePath}/img11.jpg`, alt: 'Imagen 11' },
+      { id: 9, url: `${basePath}/img12.jpg`, alt: 'Imagen 12' }
     ];
   }
 
